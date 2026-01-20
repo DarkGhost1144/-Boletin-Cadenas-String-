@@ -1,0 +1,179 @@
+
+/**
+ *
+ * @author Jkur
+ * @see String
+ * @see Scanner
+ *
+ * @version 1.0
+ */
+public class BoletinString {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int switchString;
+        System.out.println("Ejercicio 01");
+        System.out.println("Ejercicio 02");
+        System.out.println("Ejercicio 03");
+        System.out.println("Ejercicio 04");
+        System.out.println("Ejercicio 05");
+        System.out.println("Ejercicio 06");
+        System.out.println("Ejercicio 07");
+        System.out.println("Ejercicio 08");
+        System.out.println("Ejercicio 09");
+        System.out.println("Ejercicio 10");
+        System.out.println("Ejercicio 11");
+        System.out.println("Ejercicio 12");
+        System.out.println("Ejercicio 13");
+        System.out.println("Ejercicio 14");
+        System.out.println("Ejercicio 15");
+        System.out.println("Ejercicio 16");
+        System.out.println("Ejercicio 17");
+        System.out.println("Ejercicio 18");
+        System.out.println("Ejercicio 19");
+
+        switchString = sc.nextInt();
+
+        switch (switchString) {
+            case 1:
+                System.out.print("Ingresa una cadena: ");
+                String c1 = sc.next();
+
+                System.out.println("Cadena introducida es: " + c1);
+                break;
+            case 2:
+                System.out.print("Ingresa una cadena: ");
+                String c2 = sc.next();
+
+                System.out.println(c2.toUpperCase());
+
+                break;
+            case 3:
+                System.out.print("Ingresa la cadena: ");
+                String c3 = sc.next();
+
+                int longitud = c3.length();
+
+                System.out.print("La longitud de la cadena es: " + longitud);
+                break;
+            case 4:
+                System.out.print("Ingresa la cadena 1: ");
+                String c4 = sc.next();
+
+                System.out.print("Ingresa la cadena 2: ");
+                String c_4 = sc.next();
+
+                System.out.println(c4.concat(c_4));
+
+                longitud = c4.length() + c_4.length();
+
+                System.out.print("La longitud de la cadena es: " + longitud);
+                break;
+            case 5:
+                System.out.print("Ingresa la cadena: ");
+                String c5 = sc.next();
+
+                System.out.print("Ingresa un numero: ");
+                int n1 = sc.nextInt();
+
+                if (n1 < 0 || n1 >= c5.charAt(n1)) {
+                    System.out.println("No se puede acceder");
+                } else {
+                    char c = c5.charAt(n1);
+                    System.out.println("La letra de la posicion" + c + " de la palabra " + c5 + " es ");
+                }
+                break;
+            case 6:
+                System.out.print("Ingresa la cadena 1: ");
+                String c6 = sc.next();
+
+                System.out.print("Ingresa la cadena 2: ");
+                String c_6 = sc.next();
+
+                int resul = c6.compareToIgnoreCase(c_6);
+
+                if (resul < 0) {
+                    System.out.print("La cadena: " + c6 + " va antes en el diccionario");
+                } else if (resul > 0) {
+                    System.out.print("La cadena: " + c_6 + " va antes en el diccionario");
+                } else {
+                    System.out.print("La cadena son iguales");
+                }
+
+                break;
+            case 7:
+                String vocal = "a,e,i,o,u";
+
+                System.out.print("Ingresa la cadena: ");
+                String c7 = sc.next();
+
+                int palabra = c7.indexOf(vocal);
+
+                if (palabra < 0) {
+                    System.out.println("No se puede acceder");
+                } else {
+                    System.out.println("Si que empieza");
+                }
+                break;
+
+            case 8:
+                System.out.print("Ingresa la cadena: ");
+                String c8 = sc.next();
+
+                System.out.print("Cadena antes del cambio: " + c8);
+
+                System.out.println("Cadena despues del cambio: ");
+                System.out.print(c8.replace("a", "A"));
+                break;
+            case 9:
+
+                System.out.print("Introduce la primera frase: ");
+                String f1 = sc.next();
+
+                System.out.print("Introduce la segunda frase: ");
+                String f2 = sc.next();
+
+                resul = f1.compareToIgnoreCase(f2);
+
+                if (resul < 0) {
+                    System.out.print("La frase " + f1 + " va primero");
+                } else if (resul > 0) {
+                    System.out.print("La frase " + f2 + " va primera");
+                } else {
+                    System.out.println("Son iguales");
+                }
+                break;
+            case 10:
+                String v = "a,e,i,o,u";
+                String v1 = "A,E,I,O,U";
+
+                System.out.print("Ingresa la cadena: ");
+                String c10 = sc.next();
+
+                break;
+            case 11:
+
+                break;
+            case 12:
+                break;
+            case 13:
+                break;
+            case 14:
+                break;
+            case 15:
+                break;
+            case 16:
+                break;
+            case 17:
+                break;
+            case 18:
+                break;
+            case 19:
+                break;
+
+            default:
+                throw new AssertionError();
+        }
+    }
+}
