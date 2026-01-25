@@ -245,6 +245,71 @@ public class BoletinString {
 
                 break;
             case 19:
+							
+
+								System.out.print("Jugador 1, introduce la contraseña: ");
+				        String password = sc.next();
+				
+				        // Limpiar la pantalla de forma rudimentaria (saltos de línea)
+				        for (int i = 0; i < 50; i++) 
+								System.out.println();
+				
+				        String intento = "";
+				        while (!intento.equals(password)) {
+				            System.out.print("Jugador 2, adivina la contraseña: ");
+				            intento = sc.next();
+				
+				            int comparacion = intento.compareTo(password);
+				
+				            if (comparacion < 0) {
+				                System.out.println("La contraseña es mayor alfabéticamente.");
+				            } else if (comparacion > 0) {
+				                System.out.println("La contraseña es menor alfabéticamente.");
+				            }
+				        }
+				
+				        System.out.println("¡Acertaste!");
+				    }
+				}
+
+								/**
+
+							System.out.print("Jugador 1, introduce la contraseña: ");
+							        String password = sc.next();
+							
+							        for (int i = 0; i < 50; i++) {
+												System.out.println();
+												}
+											
+							
+							        System.out.println("Longitud de la contraseña: " + password.length() + " caracteres.");
+							
+							        String intento = "";
+							        while (!intento.equals(password)) {
+							            System.out.print("\nIntroduce tu palabra: ");
+							            intento = sc.nextLine();
+							
+							            if (intento.equals(password)) 
+							             break;
+							
+							            // Generar la pista
+							            String pista = "";
+							            for (int i = 0; i < password.length(); i++) {
+							                // Verificamos si el intento tiene un carácter en esa posición 
+							                // y si coincide con la contraseña original
+							                if (i < intento.length() && intento.charAt(i) == password.charAt(i)) {
+							                    pista += password.charAt(i);
+							                } else {
+							                    pista += "*";
+							                }
+							            }
+							            System.out.println("Pista: " + pista);
+							        }
+							
+							        System.out.println("¡Contraseña correcta!");
+							    }
+							}
+								*/
                 break;
 
             default:
