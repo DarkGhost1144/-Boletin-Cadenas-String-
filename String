@@ -232,6 +232,17 @@ public class BoletinString {
             case 17:
                 break;
             case 18:
+								System.out.print("Introduce tu nombre completo: ");
+				        String nombreCompleto = sc.next();
+				
+				        String resultado = nombreCompleto.replaceAll("[aAeEiIoOuUáéíóúÁÉÍÓÚüÜ]", "");
+				
+				        System.out.println("Resultado: " + resultado);
+				    }
+				}
+
+
+
                 break;
             case 19:
                 break;
